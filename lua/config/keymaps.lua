@@ -13,3 +13,10 @@ map("n", "<leader>]", "<C-i>", { desc = "go forward" })
 -- Command + ]: go forward (command key can not work in iTerm, it's the reserved key of iTerm)
 map("n", "<D-]>", "<C-i>", { desc = "go forward" })
 map("n", "<D-[>", "<C-o>", { desc = "go back" })
+
+-- :set foldmethod=indent
+-- :help foldmethod
+map("n", "+", "<cmd> foldopen <CR>", { desc = "unfold block" })
+map("n", "-", "<cmd> foldclose <CR>", { desc = "fold block" })
+
+map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action() <CR>", { desc = "code action" })
