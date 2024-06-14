@@ -3,4 +3,4 @@
 -- Add any additional autocmds here
 --
 
-vim.lsp.set_log_level("debug")
+-- vim.lsp.set_log_level("debug")

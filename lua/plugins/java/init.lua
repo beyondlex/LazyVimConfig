@@ -1,3 +1,5 @@
+-- https://github.com/nvim-java/nvim-java
+
 return {
   "nvim-java/nvim-java",
   dependencies = {
@@ -30,5 +32,17 @@ return {
       },
     },
   },
-  opts = {},
+  opts = {
+    root_markers = {
+      ".git",
+      "settings.gradle",
+      "settings.gradle.kts",
+      "pom.xml",
+      "build.gradle",
+      "mvnw",
+      "gradlew",
+      "build.gradle",
+      "build.gradle.kts",
+    },
+  },
 }
