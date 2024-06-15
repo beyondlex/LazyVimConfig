@@ -25,24 +25,24 @@ return {
       opts = {
         handlers = {
           ["jdtls"] = function()
-            require("java").setup()
+            require("java").setup({
+              root_markers = {
+                ".git",
+                "settings.gradle",
+                "settings.gradle.kts",
+                -- "pom.xml",
+                "build.gradle",
+                "mvnw",
+                "gradlew",
+                "build.gradle",
+                "build.gradle.kts",
+              },
+            })
             require("lspconfig").jdtls.setup({})
           end,
         },
       },
     },
   },
-  opts = {
-    root_markers = {
-      ".git",
-      "settings.gradle",
-      "settings.gradle.kts",
-      "pom.xml",
-      "build.gradle",
-      "mvnw",
-      "gradlew",
-      "build.gradle",
-      "build.gradle.kts",
-    },
-  },
+  opts = {},
 }
