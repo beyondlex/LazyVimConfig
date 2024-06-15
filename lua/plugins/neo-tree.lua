@@ -61,8 +61,12 @@ return {
     open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
     filesystem = {
       bind_to_cwd = false,
-      follow_current_file = { enabled = true },
+      follow_current_file = { enabled = false },
       use_libuv_file_watcher = true,
+      -- display a chain of folders with only one child (as some languages often require) in a single line
+      -- https://www.reddit.com/r/neovim/comments/16obinc/neotree_single_subfolder/?onetap_auto=true&one_tap=true
+      group_empty_dirs = true,
+      scan_mode = "deep",
     },
     window = {
       mappings = {

@@ -6,7 +6,7 @@ local map = LazyVim.safe_keymap_set
 
 -- neo-tree.nvim
 map("n", "<leader>`", "<cmd> Neotree toggle <CR>", { desc = "Neotree toggle" })
-map("n", "<leader>1", "<cmd> Neotree <CR>", { desc = "Neotree focus" })
+map("n", "<leader>1", "<cmd> Neotree filesystem reveal<CR>", { desc = "Reveal current file in neotree" })
 
 map("n", "<leader>[", "<C-o>", { desc = "go back" })
 map("n", "<leader>]", "<C-i>", { desc = "go forward" })
