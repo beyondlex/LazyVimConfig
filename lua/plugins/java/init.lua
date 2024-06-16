@@ -30,7 +30,7 @@ return {
                 ".git",
                 "settings.gradle",
                 "settings.gradle.kts",
-                -- "pom.xml",
+                -- "pom.xml", -- comment for multiple maven module, using .git instead of pom.xml
                 "build.gradle",
                 "mvnw",
                 "gradlew",

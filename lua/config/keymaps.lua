@@ -22,3 +22,5 @@ map("n", "-", "<cmd> foldclose <CR>", { desc = "fold block" })
 map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action() <CR>", { desc = "code action" })
 
 map("n", "<leader>pa", "<cmd>echo expand('%:p') <CR>", { desc = "print path of current buffer" })
+
+map("n", "<leader>/", "gcc", { desc = "comment toggle", remap = true })
