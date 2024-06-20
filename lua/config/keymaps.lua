@@ -10,9 +10,12 @@ map("n", "<leader>1", "<cmd> Neotree filesystem reveal<CR>", { desc = "Reveal cu
 
 map("n", "<leader>[", "<C-o>", { desc = "go back" })
 map("n", "<leader>]", "<C-i>", { desc = "go forward" })
+map("n", "<leader>k", "<C-]>", { desc = "jump" })
 -- Command + ]: go forward (command key can not work in iTerm, it's the reserved key of iTerm)
 map("n", "<D-]>", "<C-i>", { desc = "go forward" })
 map("n", "<D-[>", "<C-o>", { desc = "go back" })
+
+map("n", "<leader>cp", ":let @+=expand('%:p')<CR>", { desc = "copy file path of current buffer" })
 
 -- :set foldmethod=indent
 -- :help foldmethod
