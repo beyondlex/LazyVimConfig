@@ -28,3 +28,9 @@ map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action() <CR>", { desc = "code
 map("n", "<leader>pa", "<cmd>echo expand('%:p') <CR>", { desc = "print path of current buffer" })
 
 map("n", "<leader>/", "gcc", { desc = "comment toggle", remap = true })
+
+-- translate
+map("n", "<leader>tt", "<cmd>Translate zh <CR>", { desc = "translate into chinese" })
+map("n", "<leader>te", "<cmd>Translate en <CR>", { desc = "translate into english" })
+map("v", "<leader>tt", "<cmd>Translate zh <CR>", { desc = "translate into chinese" })
+map("v", "<leader>te", "<cmd>Translate en <CR>", { desc = "translate into english" })
