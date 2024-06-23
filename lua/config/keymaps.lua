@@ -4,6 +4,16 @@
 
 local map = LazyVim.safe_keymap_set
 
+-- override lazyvim:
+map("n", "<M-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+map("n", "<M-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
+map("n", "<M-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
+map("n", "<M-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+
+-- TODO: how to remove keymaps from lazyvim?
+-- vim.keymap.del("n", "<leader>e")
+map("n", "<leader>e", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", { desc = "Buffers", remap = true })
+
 -- neo-tree.nvim
 map("n", "<leader>`", "<cmd> Neotree toggle <CR>", { desc = "Neotree toggle" })
 map("n", "<leader>1", "<cmd> Neotree filesystem reveal<CR>", { desc = "Reveal current file in neotree" })

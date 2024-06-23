@@ -2,7 +2,7 @@
 -- https://github.com/kristijanhusak/vim-dadbod-ui
 return {
   "kristijanhusak/vim-dadbod-ui",
-  enabled = true,
+  enabled = false,
   keys = {
     { "<leader>ll", "<Plug>(DBUI_ExecuteQuery)", mode = { "n", "v" }, desc = "Execute query in visual or normal mode" },
     { "<M-Enter>", "<Plug>(DBUI_ExecuteQuery)", mode = { "n", "v" }, desc = "Execute query in visual or normal mode" },
