@@ -8,6 +8,13 @@ if handle then
   yi = "宜: " .. string.match(result, "yi: '(.*)',") .. " 忌: " .. string.match(result, "ji: '(.*)'")
 end
 
+-- DashboardHeader
+vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#FEDF08" })
+-- DashboardProjectTitleIcon
+vim.api.nvim_set_hl(0, "DashboardProjectTitle", { fg = "#4fd6be" })
+-- DashboardMruTitle
+vim.api.nvim_set_hl(0, "DashboardMruTitle", { fg = "#4fd6be" })
+
 return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
