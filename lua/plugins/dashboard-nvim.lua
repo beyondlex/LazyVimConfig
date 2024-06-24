@@ -8,20 +8,37 @@ if handle then
   yi = "宜: " .. string.match(result, "yi: '(.*)',") .. " 忌: " .. string.match(result, "ji: '(.*)'")
 end
 
+-- uncited tangerine
+-- #FF9408
+-- revokable deep turquoise
+-- #017374
+-- lubric dark teal
+-- #014D4E
+--
+vim.api.nvim_set_hl(0, "lex_a", { fg = "#FF9408" })
+vim.api.nvim_set_hl(0, "lex_b", { fg = "#017374" })
+vim.api.nvim_set_hl(0, "teal", { fg = "#014D4E" })
+
 -- DashboardHeader
-vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#FEDF08" })
+vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#989884" })
 -- DashboardProjectTitleIcon
 vim.api.nvim_set_hl(0, "DashboardProjectTitle", { fg = "#4fd6be" })
 -- DashboardMruTitle
 vim.api.nvim_set_hl(0, "DashboardMruTitle", { fg = "#4fd6be" })
 
+-- return {}
+
 return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
-  config = function()
-    require("dashboard").setup({
+  opts = function()
+    local opts = {
+      -- FIXME: not set vim.o.laststatus=3 when close dashboard.
       theme = "hyper",
       shortcut_type = "number",
+      hide = {
+        statusline = false,
+      },
       config = {
         week_header = {
           enable = true,
@@ -59,7 +76,13 @@ return {
           },
         },
       },
-    })
+    }
+
+    return opts
   end,
-  dependencies = { { "nvim-tree/nvim-web-devicons" } },
+  -- config = function()
+  --   require("dashboard").setup({
+  --   })
+  -- end,
+  -- dependencies = { { "nvim-tree/nvim-web-devicons" } },
 }
