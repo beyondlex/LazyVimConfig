@@ -5,10 +5,10 @@
 local map = LazyVim.safe_keymap_set
 
 -- override lazyvim:
-map("n", "<M-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
-map("n", "<M-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
-map("n", "<M-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
-map("n", "<M-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+map("n", "<M-k>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+map("n", "<M-j>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
+map("n", "<M-h>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+map("n", "<M-l>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
 
 -- TODO: how to remove keymaps from lazyvim?
 -- vim.keymap.del("n", "<leader>e")
