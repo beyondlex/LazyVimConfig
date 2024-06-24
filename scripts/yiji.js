@@ -1,8 +1,11 @@
 const { Lunar } = require("./lunar");
 const d = Lunar.fromDate(new Date());
 
-const yi = d.getDayYi().join(" ");
-const ji = d.getDayJi().join(" ");
+const limit = 4;
+
+const ji = d.getDayJi().slice(0, limit).join(" ");
+const yi = d.getDayYi().slice(0, limit).join(" ");
+
 
 function getTodayYiJi() {
   return {
