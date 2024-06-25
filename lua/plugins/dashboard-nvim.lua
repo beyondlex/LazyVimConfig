@@ -33,7 +33,6 @@ return {
   event = "VimEnter",
   opts = function()
     local opts = {
-      -- FIXME: not set vim.o.laststatus=3 when close dashboard.
       theme = "hyper",
       shortcut_type = "number",
       hide = {
@@ -80,9 +79,4 @@ return {
 
     return opts
   end,
-  -- config = function()
-  --   require("dashboard").setup({
-  --   })
-  -- end,
-  -- dependencies = { { "nvim-tree/nvim-web-devicons" } },
 }
