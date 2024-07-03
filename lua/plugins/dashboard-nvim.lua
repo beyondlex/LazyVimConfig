@@ -44,7 +44,7 @@ return {
           concat = yi or "",
           append = {},
         },
-        project = { limit = 4 },
+        project = { limit = 3, enable = false, },
         mru = { limit = 5 },
         shortcut = {
           {
