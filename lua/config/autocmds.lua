@@ -18,20 +18,3 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "lua",
   callback = set_lua_keymaps,
 })
-
-function PythonExecuteSelection()
-  local start_pos = vim.fn.getpos("'<")
-  local end_pos = vim.fn.getpos("'>")
-  local lines = vim.fn.getline(start_pos[2], end_pos[2])
-  local code = table.concat(lines, "\n")
-  vim.api.nvim_exec("python << EOF\n" .. code .. "\nEOF", false)
-end
-
-local function executePython()
-  vim.api.nvim_set_keymap("v", "<M-Enter>", ":lua PythonExecuteSelection()<CR>", { noremap = true, silent = true })
-end
-
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "py",
-  callback = executePython,
-})

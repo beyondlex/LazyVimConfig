@@ -19,7 +19,8 @@ return {
     })
     local o = {
       options = {
-        theme = "auto",
+        -- theme = "auto",
+        theme = "catppuccin",
       },
     }
     return vim.tbl_deep_extend("force", {}, opts, o)
