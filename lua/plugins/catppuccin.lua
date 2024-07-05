@@ -2,6 +2,7 @@
 local grey = '#F2F2F2'
 local purp = '#EEEBFE'
 local light_blue = '#DAEFFF'
+local warning = "#eeee00"
 return {
   {
     "catppuccin/nvim",
@@ -41,6 +42,13 @@ return {
         highlight_overrides = {
 
           latte = function (latte)
+
+            local O = require("catppuccin").options
+            local C = require("catppuccin.palettes").get_palette("latte")
+            local U = require "catppuccin.utils.colors"
+            local virtual_text = O.integrations.native_lsp.virtual_text
+            local darkening_percentage = 0.095
+
             return {
               NeoTreeNormal = { fg = latte.text, bg = latte.base },
               NeoTreeNormalNC = { fg = latte.text, bg = "NONE" },
@@ -51,9 +59,15 @@ return {
               NeoTreeFileStatsHeader = { fg = latte.mantle, bg = grey },
               NeoTreeWinSeparator = { fg = latte.mantle, bg = "NONE" },
               -- Comment = { fg = "#eeeeee"}
-              
-              illuminatedWord = { bg = purp },
-              illuminatedCurWord = { bg = purp },
+              -- catppuccin-nvim/lua/catppuccin/groups/integrations/native_lsp.lua
+              LspReferenceText = { bg = purp },
+              LspReferenceRead = { bg = purp },
+              LspReferenceWrite = { bg = purp },
+              DiagnosticVirtualTextWarn = {
+                bg = O.transparent_background and C.none or U.darken(warning, darkening_percentage, C.base),
+                fg = warning,
+                style = virtual_text.warnings,
+              }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
             }
           end,
         },
