@@ -106,6 +106,14 @@ return {
           staged = "󰱒",
         },
       },
+      diagnostics = {
+        symbols = {
+          warn = "!"
+        }
+      },
+      highlights = {
+        warn = "DiagnosticSignWarn",
+      },
     },
   },
   config = function(_, opts)

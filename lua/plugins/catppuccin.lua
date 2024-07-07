@@ -88,10 +88,12 @@ return {
               NoiceScrollbar = { bg = "#eeeeee"},
               NoiceScrollbarThumb = { bg = "#dddddd" },
 
+
               -- catppuccin-nvim/lua/catppuccin/groups/integrations/native_lsp.lua
               LspReferenceText = { bg = purp },
               LspReferenceRead = { bg = purp },
               LspReferenceWrite = { bg = purp },
+              DiagnosticSignWarn = { fg = warning },
               DiagnosticVirtualTextWarn = {
                 bg = O.transparent_background and C.none or U.darken(warning, darkening_percentage, C.base),
                 fg = warning,
