@@ -9,6 +9,7 @@ local text = '#000000'
 local green = '#DFF6DB'
 local leaf = "#009120"
 local sky = "#1e66f5"
+local white = "#ffffff"
 
 return {
   {
@@ -125,6 +126,15 @@ return {
             style = "icon"
           },
           diagnostics = false,
+          -- separator_style = "slope", -- tab分隔线倾斜
+          -- :h bufferline-offset
+          offsets = {
+            {
+              filetype = "neo-tree", -- :echo &ft
+              text = "Files",
+              seperator = true,
+            }
+          }
         },
         highlights = require("catppuccin.groups.integrations.bufferline").get {
           styles = { "italic", "bold" },
@@ -143,8 +153,11 @@ return {
               duplicate_visible = { fg = latte.text, bg = grey },
               duplicate = { fg = latte.text, bg = grey, style = { "normal" } },
 
-              separator = { fg = latte.separator_fg, bg = grey },
-              separator_visible = { fg = warning, bg = grey },
+              -- separator = { fg = latte.separator_fg, bg = grey },
+              separator = { fg = grey, bg = grey },
+              -- separator_visible = { fg = warning, bg = grey },
+              separator_visible = { fg = grey, bg = grey },
+              separator_selected = { fg = grey, bg = white },
 
 
               close_button = { bg = grey },
