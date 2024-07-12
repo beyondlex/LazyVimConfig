@@ -38,6 +38,12 @@ return {
                 "build.gradle",
                 "build.gradle.kts",
               },
+              java_debug_adapter = {
+                enable = true,
+              },
+              notifications = {
+                dap = true,
+              },
             })
             require("lspconfig").jdtls.setup({})
           end,
