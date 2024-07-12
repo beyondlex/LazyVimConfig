@@ -43,7 +43,7 @@ return {
           }
         },
         lualine_y = {
-          { "progress", separator = " ", padding = { left = 1, right = 0 },
+          { "progress", separator = " ", padding = { left = 1, right = 1 },
             color = { fg = latte.text, bg = latte.surface2 }
           },
           { "location", padding = { left = 0, right = 1 },

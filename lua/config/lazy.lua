@@ -8,6 +8,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  ui = {
+    backdrop = 20,
+    border = "rounded",
+  },
   spec = {
     -- add LazyVim and import its plugins
     {
@@ -35,8 +39,9 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  -- install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "catppuccin-latte", "habamax" } },
+  checker = { enabled = false }, -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins
