@@ -26,12 +26,19 @@ vim.api.nvim_set_hl(0, "DashboardProjectTitle", { fg = "#4fd6be" })
 -- DashboardMruTitle
 vim.api.nvim_set_hl(0, "DashboardMruTitle", { fg = "#4fd6be" })
 
+vim.api.nvim_set_hl(0, "DashboardFooter", { fg = "#009120" })
+
 -- return {}
 
 return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
   opts = function()
+
+    local daysoftheweek =
+      { '🌤️Sunday', '🍋Monday', '🍊Tuesday', '🍉Wednesday', '🍎Thursday', '🚗Friday', '🐠Saturday' }
+    local day = daysoftheweek[os.date('*t').wday]
+
     local opts = {
       theme = "hyper",
       shortcut_type = "number",
@@ -39,13 +46,21 @@ return {
         statusline = false,
       },
       config = {
+        header = {
+          '',
+          '',
+          day or 'Hi',
+          '',
+          '',
+        },
         week_header = {
-          enable = true,
+          enable = false,
           concat = yi or "",
           append = {},
         },
         project = { limit = 3, enable = false, },
         mru = { limit = 5 },
+        footer = { '', '', yi },
         shortcut = {
           {
             icon = "󰱼 ",
