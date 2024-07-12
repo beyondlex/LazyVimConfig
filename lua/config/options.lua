@@ -6,3 +6,6 @@ local opt = vim.opt
 opt.relativenumber = false
 opt.laststatus = 3
 vim.g.autoformat = false
+
+-- change how tabs are displayed: (instead of the `>`)
+opt.listchars = { tab = '  ', trail = '-' }
