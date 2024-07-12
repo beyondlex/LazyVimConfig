@@ -7,7 +7,8 @@ local lightgrey = '#dddddd'
 local darkgrey = '#222222'
 local text = '#000000'
 local green = '#DFF6DB'
-local dark_green = "#009120"
+local leaf = "#009120"
+local sky = "#1e66f5"
 
 return {
   { 
@@ -23,6 +24,7 @@ return {
     config = function ()
       require("catppuccin").setup({
         flavour = "latte",
+        transparent_background = true, -- disables setting the background color.
         integrations = {
           noice = true,
           notify = true,
@@ -51,7 +53,7 @@ return {
             maroon = darkgrey,
             yellow = darkgrey,
             blue = darkgrey,
-            green = "#009120",
+            green = leaf,
             rosewater = "#c6a0f6",
             flamingo = "#c6a0f6",
             mantle = grey,
@@ -70,7 +72,7 @@ return {
             return {
               NeoTreeNormal = { fg = latte.text, bg = latte.base },
               NeoTreeNormalNC = { fg = latte.text, bg = "NONE" },
-              Visual = { bg = light_blue, style = {} },
+              Visual = { fg = "#ffffff", bg = sky, style = {} },
               SignColumn = { fg = warning }, -- column where |signs| are displayed
               SignColumnSB = { bg = C.crust, fg = warning }, -- column where |signs| are displayed
               -- NeoTreeNormal = { fg = latte.text, bg = grey },
@@ -79,7 +81,10 @@ return {
               NeoTreeFileStatsHeader = { fg = latte.mantle, bg = grey },
               NeoTreeWinSeparator = { fg = latte.mantle, bg = "NONE" },
               NeoTreeDirectoryIcon = { fg = lightgrey, bg = "NONE" },
-              Comment = { fg = "#E2E2E3"},
+              NeoTreeGitModified = { fg = sky, bg = "NONE" },
+              NeoTreeGitAdded = { fg = leaf, bg = "NONE" },
+
+              Comment = { fg = "#E0E0E0"},
               -- popup menu
               PmenuSel = { fg = "#ffffff", bg = "#002D04" },
               Pmenu = { bg = "#D0FEFE" },
@@ -130,17 +135,18 @@ return {
             latte = {
               fill = { bg = "#ffffff" },
               background = { fg = latte.text, bg = grey },
-              -- separator = { fg = latte.separator_fg, bg = latte.inactive_bg },
+              close_button_visible = { bg = grey },
+              separator = { fg = latte.separator_fg, bg = grey },
               -- buffer_visible = { bg = grey },
-              -- close_button = { bg = grey },
+              close_button = { bg = grey },
               -- numbers = { bg = grey },
               -- diagnostic = { bg = grey },
-              indicator_selected = { fg = dark_green },
+              indicator_selected = { fg = leaf },
               buffer_selected = { style = { "bold", "italic" }},
               -- Modified
-              modified = { fg = dark_green, bg = latte.mantle },
-              modified_visible = { fg = dark_green, bg = latte.mantle },
-              modified_selected = { fg = dark_green, bg = latte.base },
+              modified = { fg = leaf, bg = latte.mantle },
+              modified_visible = { fg = leaf, bg = latte.mantle },
+              modified_selected = { fg = leaf, bg = latte.base },
             },
           },
         },
