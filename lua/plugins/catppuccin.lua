@@ -11,7 +11,7 @@ local leaf = "#009120"
 local sky = "#1e66f5"
 
 return {
-  { 
+  {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
     enabled = false,
@@ -84,7 +84,7 @@ return {
               NeoTreeGitModified = { fg = sky, bg = "NONE" },
               NeoTreeGitAdded = { fg = leaf, bg = "NONE" },
 
-              Comment = { fg = "#E0E0E0"},
+              Comment = { fg = "#D0D0D0"},
               -- popup menu
               PmenuSel = { fg = "#ffffff", bg = "#002D04" },
               Pmenu = { bg = "#D0FEFE" },
@@ -135,14 +135,24 @@ return {
             latte = {
               fill = { bg = "#ffffff" },
               background = { fg = latte.text, bg = grey },
-              close_button_visible = { bg = grey },
+
+              buffer_visible = { fg = latte.text, bg = grey, style = { "bold", "italic" } }, -- buffer selected, not focus
+              buffer_selected = { style = { "bold", "italic" }},
+              -- Duplicate
+              duplicate_selected = { fg = latte.text, },
+              duplicate_visible = { fg = latte.text, bg = grey },
+              duplicate = { fg = latte.text, bg = grey, style = { "normal" } },
+
               separator = { fg = latte.separator_fg, bg = grey },
-              -- buffer_visible = { bg = grey },
+              separator_visible = { fg = warning, bg = grey },
+
+
               close_button = { bg = grey },
+              close_button_visible = { bg = grey },
               -- numbers = { bg = grey },
               -- diagnostic = { bg = grey },
               indicator_selected = { fg = leaf },
-              buffer_selected = { style = { "bold", "italic" }},
+              indicator_visible = { bg = grey }, -- 切割线失焦
               -- Modified
               modified = { fg = leaf, bg = latte.mantle },
               modified_visible = { fg = leaf, bg = latte.mantle },
