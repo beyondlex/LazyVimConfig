@@ -114,9 +114,33 @@ return {
         -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
         gopls = {
 
-        }
+        },
+        astro = {
+        },
+        -- TODO: seems not works
+        mdx_analyzer = {
+          filetypes = { "markdown.mdx" },
+          init_options = {
+            typescript = {
+              enabled = true,
+              -- tsdk = "/Users/lex/code/astro/tutorial/node_modules/typescript/lib"
+            }
+          },
+          settings = {
+            mdx= {
+              trace= {
+                server= {
+                  verbosity = "verbose",
+                  format = "json",
+                }
+              }
+            }
+          }
+        },
+        tsserver = {
+        },
       },
-      -- you can do any additional lsp server setup here
+      -- -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
       ---@type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
       setup = {

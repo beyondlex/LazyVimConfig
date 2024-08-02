@@ -29,3 +29,26 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
   group = format_sync_grp,
 })
+
+-- set filetype of adoc to asciidoctor instead of asciidoc
+-- vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+--   pattern = {"*.adoc", "*.asciidoc"},
+--   callback = function()
+--     vim.cmd("set filetype=asciidoctor")
+--   end,
+-- })
+--
+
+-- https://www.in2deep.xyz/posts/astro-development-using-nvim/
+-- .mdx
+vim.filetype.add({
+  extension = {
+    mdx = "markdown.mdx",
+    -- mdx = "mdx",
+    astro = "astro",
+  },
+  filename = {},
+  pattern = {},
+})
+-- https://joschua.io/posts/2023/06/22/set-up-nvim-for-astro/
+-- vim.treesitter.language.register("markdown", "mdx")
