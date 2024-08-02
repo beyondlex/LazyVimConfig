@@ -117,7 +117,7 @@ return {
         },
         astro = {
         },
-        -- TODO: seems not works
+        -- TODO: seems not working
         mdx_analyzer = {
           filetypes = { "markdown.mdx" },
           init_options = {
