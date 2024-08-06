@@ -117,6 +117,7 @@ return {
         },
         astro = {
         },
+        tailwindcss = {},
         -- TODO: seems not working
         mdx_analyzer = {
           filetypes = { "markdown.mdx" },
