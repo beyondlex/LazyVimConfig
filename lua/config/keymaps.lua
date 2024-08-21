@@ -42,3 +42,16 @@ map("n", "<leader>tt", "<cmd>Translate zh <CR>", { desc = "translate into chines
 map("n", "<leader>te", "<cmd>Translate en <CR>", { desc = "translate into english" })
 map("v", "<leader>tt", "<cmd>Translate zh <CR>", { desc = "translate into chinese" })
 map("v", "<leader>te", "<cmd>Translate en <CR>", { desc = "translate into english" })
+
+-- Debugger
+-- nvim-dap (:h dap.txt)
+-- https://www.lazyvim.org/keymaps#nvim-dap
+map("n", "<leader>dd", "<cmd>lua require('dap').step_over() <CR>", { desc = "Dap: Step Over" })
+
+
+-- For Markdown Typing:
+-- 在 Visual 模式下将选中的文本用反引号包裹
+vim.api.nvim_set_keymap('x', '<leader>`', 'c`<C-r>"`<Esc>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('x', '<leader>*', 'c**<C-r>"**<Esc>', { noremap = true, silent = true })
+
+

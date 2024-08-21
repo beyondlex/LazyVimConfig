@@ -117,27 +117,27 @@ return {
         },
         astro = {
         },
-        tailwindcss = {},
+        -- tailwindcss = {},
         -- TODO: seems not working
-        mdx_analyzer = {
-          filetypes = { "markdown.mdx" },
-          init_options = {
-            typescript = {
-              enabled = true,
-              -- tsdk = "/Users/lex/code/astro/tutorial/node_modules/typescript/lib"
-            }
-          },
-          settings = {
-            mdx= {
-              trace= {
-                server= {
-                  verbosity = "verbose",
-                  format = "json",
-                }
-              }
-            }
-          }
-        },
+        -- mdx_analyzer = {
+        --   filetypes = { "markdown_mdx" },
+        --   init_options = {
+        --     typescript = {
+        --       enabled = true,
+        --       tsdk = "/Users/lex/code/astro/tutorial/node_modules/typescript/lib"
+        --     }
+        --   },
+        --   settings = { -- TODO: is this settings right?
+        --     mdx= {
+        --       trace= {
+        --         server= {
+        --           verbosity = "verbose",
+        --           format = "json",
+        --         }
+        --       }
+        --     }
+        --   }
+        -- },
         tsserver = {
         },
       },
