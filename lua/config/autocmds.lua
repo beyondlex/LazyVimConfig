@@ -43,8 +43,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 -- .mdx
 vim.filetype.add({
   extension = {
-    mdx = "markdown.mdx",
-    -- mdx = "mdx",
+    mdx = "markdown",
     astro = "astro",
   },
   filename = {},
