@@ -50,8 +50,8 @@ map("n", "<leader>dd", "<cmd>lua require('dap').step_over() <CR>", { desc = "Dap
 
 
 -- For Markdown Typing:
--- 在 Visual 模式下将选中的文本用反引号包裹
-vim.api.nvim_set_keymap('x', '<leader>`', 'c`<C-r>"`<Esc>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('x', '<leader>*', 'c**<C-r>"**<Esc>', { noremap = true, silent = true })
+-- 在 Visual 模式下将选中的文本用反引号包裹 (use nvim-surround instead)
+-- vim.api.nvim_set_keymap('x', '<leader>`', 'c`<C-r>"`<Esc>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('x', '<leader>*', 'c**<C-r>"**<Esc>', { noremap = true, silent = true })
 
 
