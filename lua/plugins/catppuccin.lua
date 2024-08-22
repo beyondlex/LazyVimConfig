@@ -50,7 +50,7 @@ return {
             lavender = darkgrey,
             peach = "#95009A",
             --peach = "#1e66f5",
-            mauve = "#209fb5",
+            mauve = "#95009A",
             maroon = darkgrey,
             yellow = darkgrey,
             blue = darkgrey,
