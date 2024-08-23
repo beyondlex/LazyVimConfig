@@ -54,4 +54,12 @@ map("n", "<leader>dd", "<cmd>lua require('dap').step_over() <CR>", { desc = "Dap
 -- vim.api.nvim_set_keymap('x', '<leader>`', 'c`<C-r>"`<Esc>', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('x', '<leader>*', 'c**<C-r>"**<Esc>', { noremap = true, silent = true })
 
+-- nvimdiff
+map("n", "<leader>>>", "<cmd>diffg LO <CR>", { desc = "git: accept mine" })
+map("n", "<leader><<", "<cmd>diffg RE <CR>", { desc = "git: accept yours" })
+map("n", "<leader>LL", "<cmd>:1,$+1diffget LO <CR>", { desc = "git: accept mine(all lines)" })
+map("n", "<leader>HH", "<cmd>:1,$+1diffget RE <CR>", { desc = "git: accept mine(all lines)" })
+map("n", "<M-n>", "]c", { desc = "git: next diff" })
+map("n", "<M-b>", "[c", { desc = "git: prev diff" })
+
 
